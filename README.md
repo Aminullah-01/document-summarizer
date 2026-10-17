@@ -41,7 +41,7 @@ Formats the agent cannot read are reported plainly; the skill never claims to ha
 ## Folder structure
 
 ```
-document-summarizer/
+.
 ├── SKILL.md      # Metadata (YAML frontmatter) + instructions
 ├── README.md     # This file
 └── LICENSE       # MIT License
@@ -59,12 +59,12 @@ No scripts, dependencies, or configuration files are required.
 
 ## Installation
 
-1. Copy the `document-summarizer/` folder into the skills directory used by your agent.
+1. Copy this project folder into the skills directory used by your agent.
 
    A common location is `~/.config/<product>/skills/` or a project-level `.skills/` folder. Check your agent's documentation for the exact path.
 
    ```bash
-   cp -r document-summarizer ~/.config/<product>/skills/
+   cp -r . ~/.config/<product>/skills/document-summarizer
    ```
 
 2. Restart or reload the agent so it picks up the new skill.
@@ -99,7 +99,7 @@ The skill follows the naming and frontmatter rules in the official specification
 
 ```bash
 pip install skills-ref
-skills-ref validate ./document-summarizer
+skills-ref validate .
 ```
 
 If `skills-ref` cannot be installed, perform these manual checks:
